@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    container_name: cafecito-web
+    image: image-cafecito
+    ports:
+      - '8080:80'
+    volumes:
+      - my-usr-vol:/usr/share/nginx/html
+volumes:
+  my-usr-vol:
